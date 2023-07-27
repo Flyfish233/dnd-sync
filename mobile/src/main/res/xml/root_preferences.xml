@@ -13,6 +13,7 @@
 
         <rikka.material.preference.MaterialSwitchPreference
             app:defaultValue="false"
+            app:selectable="false"
             app:iconSpaceReserved="false"
             app:key="bedtime_sync_key"
             app:summary="@string/sync_bedtime_summary"
