@@ -2,12 +2,7 @@ package de.rhaeus.dndsync;
 
 import android.app.NotificationManager;
 import android.content.Context;
-import android.os.Handler;
-import android.os.PowerManager;
-import android.os.VibrationEffect;
-import android.os.Vibrator;
 import android.util.Log;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 
@@ -20,7 +15,7 @@ public class DNDSyncListenerService extends WearableListenerService {
 
 
     @Override
-    public void onMessageReceived (@NonNull MessageEvent messageEvent) {
+    public void onMessageReceived(@NonNull MessageEvent messageEvent) {
         Log.d(TAG, "onMessageReceived: " + messageEvent);
 
         if (messageEvent.getPath().equalsIgnoreCase(DND_SYNC_MESSAGE_PATH)) {
@@ -52,7 +47,7 @@ public class DNDSyncListenerService extends WearableListenerService {
                     mNotificationManager.setInterruptionFilter(dndStatePhone);
                     Log.d(TAG, "DND set to " + dndStatePhone);
                 } else {
-                Log.d(TAG, "attempting to set DND but access not granted");
+                    Log.d(TAG, "attempting to set DND but access not granted");
                 }
             }
 

@@ -14,6 +14,7 @@ public class DNDSyncAccessService extends AccessibilityService {
     public static DNDSyncAccessService getSharedInstance() {
         return instance;
     }
+
     @Override
     protected void onServiceConnected() {
         instance = this;
@@ -61,12 +62,12 @@ public class DNDSyncAccessService extends AccessibilityService {
         Path path = new Path();
 
         final int height = displayMetrics.heightPixels;
-        final int top = (int)(height * .25);
-        final int mid = (int)(height * .5);
-        final int bottom = (int)(height * .75);
+        final int top = (int) (height * .25);
+        final int mid = (int) (height * .5);
+        final int bottom = (int) (height * .75);
         final int midX = displayMetrics.widthPixels / 2;
 
-        path.moveTo(midX, (int)(height * .4));
+        path.moveTo(midX, (int) (height * .4));
         gestureBuilder.addStroke(new GestureDescription.StrokeDescription(path, 0, 50));
         dispatchGesture(gestureBuilder.build(), null, null);
     }
@@ -77,9 +78,9 @@ public class DNDSyncAccessService extends AccessibilityService {
         Path path = new Path();
 
         final int height = displayMetrics.heightPixels;
-        final int top = (int)(height * .25);
-        final int mid = (int)(height * .5);
-        final int bottom = (int)(height * .75);
+        final int top = (int) (height * .25);
+        final int mid = (int) (height * .5);
+        final int bottom = (int) (height * .75);
         final int midX = displayMetrics.widthPixels / 2;
 
         path.moveTo(midX, 0);

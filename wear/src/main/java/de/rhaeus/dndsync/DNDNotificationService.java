@@ -1,12 +1,9 @@
 package de.rhaeus.dndsync;
 
 
-import android.content.ComponentName;
 import android.content.SharedPreferences;
-import android.content.pm.PackageManager;
 import android.service.notification.NotificationListenerService;
 import android.util.Log;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.preference.PreferenceManager;
@@ -61,12 +58,12 @@ public class DNDNotificationService extends NotificationListenerService {
 
 
     @Override
-    public void onInterruptionFilterChanged (int interruptionFilter) {
+    public void onInterruptionFilterChanged(int interruptionFilter) {
         Log.d(TAG, "interruption filter changed to " + interruptionFilter);
 
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
         boolean syncDnd = prefs.getBoolean("dnd_sync_key", true);
-        if(syncDnd) {
+        if (syncDnd) {
             new Thread(new Runnable() {
                 public void run() {
                     sendDNDSync(interruptionFilter);
@@ -81,9 +78,7 @@ public class DNDNotificationService extends NotificationListenerService {
         // search nodes for sync
         CapabilityInfo capabilityInfo = null;
         try {
-            capabilityInfo = Tasks.await(
-                    Wearable.getCapabilityClient(this).getCapability(
-                            DND_SYNC_CAPABILITY_NAME, CapabilityClient.FILTER_REACHABLE));
+            capabilityInfo = Tasks.await(Wearable.getCapabilityClient(this).getCapability(DND_SYNC_CAPABILITY_NAME, CapabilityClient.FILTER_REACHABLE));
         } catch (ExecutionException e) {
             e.printStackTrace();
             Log.e(TAG, "execution error while searching nodes", e);
@@ -105,8 +100,7 @@ public class DNDNotificationService extends NotificationListenerService {
                 if (node.isNearby()) {
                     byte[] data = new byte[2];
                     data[0] = (byte) dndState;
-                    Task<Integer> sendTask =
-                            Wearable.getMessageClient(this).sendMessage(node.getId(), DND_SYNC_MESSAGE_PATH, data);
+                    Task<Integer> sendTask = Wearable.getMessageClient(this).sendMessage(node.getId(), DND_SYNC_MESSAGE_PATH, data);
 
                     sendTask.addOnSuccessListener(new OnSuccessListener<Integer>() {
                         @Override

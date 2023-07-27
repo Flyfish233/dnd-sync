@@ -21,7 +21,7 @@ public class DNDSyncListenerService extends WearableListenerService {
     private static final String DND_SYNC_MESSAGE_PATH = "/wear-dnd-sync";
 
     @Override
-    public void onMessageReceived (@NonNull MessageEvent messageEvent) {
+    public void onMessageReceived(@NonNull MessageEvent messageEvent) {
         if (Log.isLoggable(TAG, Log.DEBUG)) {
             Log.d(TAG, "onMessageReceived: " + messageEvent);
         }
@@ -59,7 +59,7 @@ public class DNDSyncListenerService extends WearableListenerService {
             byte currentDndState = (byte) filterState;
             Log.d(TAG, "currentDndState: " + currentDndState);
 
-            if(dndStatePhone == 5 || dndStatePhone ==6) {
+            if (dndStatePhone == 5 || dndStatePhone == 6) {
                 boolean useBedtimeMode = prefs.getBoolean("bedtime_key", true);
                 Log.d(TAG, "useBedtimeMode: " + useBedtimeMode);
                 if (useBedtimeMode) {
@@ -101,8 +101,8 @@ public class DNDSyncListenerService extends WearableListenerService {
         Log.d(TAG, "accessibility connected. Perform toggle.");
         // turn on screen
         PowerManager pm = (PowerManager) getApplicationContext().getSystemService(Context.POWER_SERVICE);
-        PowerManager.WakeLock wakeLock = pm.newWakeLock(PowerManager.FULL_WAKE_LOCK | PowerManager.ACQUIRE_CAUSES_WAKEUP , "dndsync:MyWakeLock");
-        wakeLock.acquire(2*60*1000L /*2 minutes*/);
+        PowerManager.WakeLock wakeLock = pm.newWakeLock(PowerManager.FULL_WAKE_LOCK | PowerManager.ACQUIRE_CAUSES_WAKEUP, "dndsync:MyWakeLock");
+        wakeLock.acquire(2 * 60 * 1000L /*2 minutes*/);
 
         // create a handler to post messages to the main thread
         Handler mHandler = new Handler(getMainLooper());

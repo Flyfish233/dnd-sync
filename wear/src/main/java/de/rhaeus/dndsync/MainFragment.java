@@ -36,11 +36,11 @@ public class MainFragment extends PreferenceFragmentCompat {
         });
 
         accPref.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
-        public boolean onPreferenceClick(Preference preference) {
-            if (!checkAccessibilityService()) {
-                openAccessibility();
-            }
-            return true;
+            public boolean onPreferenceClick(Preference preference) {
+                if (!checkAccessibilityService()) {
+                    openAccessibility();
+                }
+                return true;
             }
         });
 

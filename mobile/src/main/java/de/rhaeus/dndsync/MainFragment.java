@@ -18,7 +18,7 @@ public class MainFragment extends PreferenceFragmentCompat {
 
         dndPref = findPreference("dnd_permission_key");
 
-        assert(dndPref != null);
+        assert (dndPref != null);
 
         dndPref.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
             public boolean onPreferenceClick(Preference preference) {
@@ -45,7 +45,7 @@ public class MainFragment extends PreferenceFragmentCompat {
     }
 
     private void openDNDPermissionRequest() {
-       Intent intent = new Intent(android.provider.Settings.ACTION_NOTIFICATION_LISTENER_SETTINGS);
-       startActivity(intent);
+        Intent intent = new Intent(android.provider.Settings.ACTION_NOTIFICATION_LISTENER_SETTINGS);
+        startActivity(intent);
     }
 }
