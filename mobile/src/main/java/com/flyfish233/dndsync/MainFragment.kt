@@ -20,7 +20,8 @@ class MainFragment : PreferenceFragmentCompat() {
             if (!checkDNDPermission()) {
                 openDNDPermissionRequest()
             } else {
-                Toast.makeText(context, "DND Permission allowed", Toast.LENGTH_SHORT).show()
+                Toast.makeText(context, R.string.dnd_permission_allowed, Toast.LENGTH_SHORT)
+                    .show()
             }
             true
         }
@@ -44,7 +45,7 @@ class MainFragment : PreferenceFragmentCompat() {
                 true
             }
         if (context?.packageManager?.getLaunchIntentForPackage("com.google.android.apps.wellbeing") != null)
-            findPreference<Preference>("bedtime_sync_key")!!.isEnabled = true
+            findPreference<Preference>("bedtime_sync_key")!!.isSelectable = true
     }
 
 
