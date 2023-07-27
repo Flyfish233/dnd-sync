@@ -2,6 +2,6 @@
 
 <androidx.fragment.app.FragmentContainerView xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/fragment_container_view"
-    android:name="de.rhaeus.dndsync.MainFragment"
+    android:name="com.flyfish233.dndsync.MainFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent" />

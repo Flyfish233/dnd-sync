@@ -1,16 +1,8 @@
 <resources>
     <!-- Base application theme. -->
-    <style name="Theme.DNDSync" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+    <style name="Theme.DNDSync" parent="Theme.Material3.DynamicColors.Light.Rikka">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/primaryColor</item>
-        <item name="colorPrimaryVariant">@color/primaryLightColor</item>
         <item name="colorOnPrimary">@color/primaryTextColor</item>
-        <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/secondaryColor</item>
-        <item name="colorSecondaryVariant">@color/secondaryLightColor</item>
-        <item name="colorOnSecondary">@color/secondaryTextColor</item>
-        <!-- Status bar color. -->
-        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
-        <!-- Customize your theme here. -->
     </style>
 </resources>

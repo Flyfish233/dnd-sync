@@ -1,4 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">DNDSync</string>
+    <string name="app_name">勿扰同步</string>
+    <string name="sync_header">同步</string>
+    <string name="other_header">其他</string>
+    <string name="access_desc">允许勿扰同步自动点击快捷面板上的就寝模式按钮。</string>
+    <string name="acc_not_connected">请授权辅助功能权限才能自动切换就寝模式</string>
+    <string name="bedtime_toggle">开始切换到就寝模式</string>
+    <string name="permission_header">权限</string>
+    <string name="dnd_permission_title">免打扰权限</string>
+    <string name="dnd_permission_allowed">权限已授权</string>
+    <string name="dnd_permission_not_allowed">权限未授权，请根据指引手动使用 ADB 授权命令</string>
+    <string name="acc_permission_title">辅助功能权限</string>
+    <string name="acc_permission_allowed">已授权</string>
+    <string name="acc_permission_not_allowed">未授权</string>
+    <string name="sync_title">勿扰模式</string>
+    <string name="sync_summary_off">同步手表的勿扰模式到手机</string>
+    <string name="sync_summary_on">同步手表的勿扰模式到手机</string>
+    <string name="bedtime_title">就寝模式</string>
+    <string name="bedtime_summary_off">同步就寝模式。确保手机上打开了同步且手机支持谷歌数字健康</string>
+    <string name="bedtime_summary_on">同步就寝模式。确保您已经打开辅助功能且已配置好快捷面板</string>
+    <string name="vibrate_title">启用震动</string>
+    <string name="vibrate_summary_off">切换模式时使手表震动</string>
+    <string name="vibrate_summary_on">切换模式时使手表震动</string>
+    <string name="follow_instruction_to_allow_dnd_permission">请使用 ADB 手动授权！</string>
 </resources>

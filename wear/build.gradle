@@ -1,19 +1,24 @@
 plugins {
     id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
 }
 
 android {
     compileSdk 34
 
     defaultConfig {
-        applicationId "de.rhaeus.dndsync"
+        applicationId "com.flyfish233.dndsync"
         minSdk 30
         targetSdk 34
         versionCode 2
         versionName "1.1"
 
     }
-
+    configurations {
+        configureEach {
+            exclude group: 'androidx.appcompat', module: 'appcompat'
+        }
+    }
     buildTypes {
         release {
             minifyEnabled true
@@ -24,17 +29,23 @@ android {
     buildFeatures {
         viewBinding true
     }
-    namespace 'de.rhaeus.dndsync'
-}
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
 
+    namespace 'com.flyfish233.dndsync'
+}
 dependencies {
     implementation 'com.google.android.gms:play-services-wearable:18.0.0'
     implementation 'androidx.percentlayout:percentlayout:1.0.0'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation 'androidx.recyclerview:recyclerview:1.3.0'
     implementation 'androidx.wear:wear:1.2.0'
-    implementation 'androidx.preference:preference:1.2.0'
-    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'androidx.preference:preference-ktx:1.2.0'
     implementation 'com.google.android.material:material:1.9.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.core:core-ktx:1.10.1'
+    implementation 'dev.rikka.rikkax.appcompat:appcompat:1.6.1'
+    implementation 'dev.rikka.rikkax.material:material-preference:2.0.0'
 }

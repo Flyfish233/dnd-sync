@@ -5,21 +5,20 @@
         app:iconSpaceReserved="false"
         app:title="@string/sync_header">
 
-        <SwitchPreferenceCompat
+        <rikka.material.preference.MaterialSwitchPreference
             app:defaultValue="true"
             app:iconSpaceReserved="false"
             app:key="dnd_sync_key"
-            app:title="Sync DND"
-            app:summaryOn="@string/sync_summary_on"
             app:summaryOff="@string/sync_summary_off"
-            />
+            app:summaryOn="@string/sync_summary_on"
+            app:title="Sync DND" />
 
-        <SwitchPreferenceCompat
+        <rikka.material.preference.MaterialSwitchPreference
+            app:defaultValue="false"
             app:iconSpaceReserved="false"
             app:key="bedtime_key"
-            app:defaultValue="false"
-            app:summaryOn="@string/bedtime_summary_on"
             app:summaryOff="@string/bedtime_summary_off"
+            app:summaryOn="@string/bedtime_summary_on"
             app:title="@string/bedtime_title" />
 
     </PreferenceCategory>
@@ -28,14 +27,13 @@
         app:iconSpaceReserved="false"
         app:title="@string/other_header">
 
-        <SwitchPreferenceCompat
+        <rikka.material.preference.MaterialSwitchPreference
             app:defaultValue="false"
             app:iconSpaceReserved="false"
             app:key="vibrate_key"
-            app:title="@string/vibrate_title"
-            app:summaryOn="@string/vibrate_summary_on"
             app:summaryOff="@string/vibrate_summary_off"
-            />
+            app:summaryOn="@string/vibrate_summary_on"
+            app:title="@string/vibrate_title" />
 
     </PreferenceCategory>
 

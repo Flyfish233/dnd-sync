@@ -13,7 +13,7 @@
     <!-- Permission Preferences -->
     <string name="dnd_permission_title">DND Permission</string>
     <string name="dnd_permission_allowed">DND access granted</string>
-    <string name="dnd_permission_not_allowed">DND access denied</string>
+    <string name="dnd_permission_not_allowed">DND access denied, follow the instructions to grant permission via ADB</string>
 
     <!-- Permission Preferences -->
     <string name="acc_permission_title">Accessibility Service</string>
@@ -35,5 +35,6 @@
     <string name="vibrate_title">Vibration</string>
     <string name="vibrate_summary_off">Vibrate on sync request</string>
     <string name="vibrate_summary_on">Vibrate on sync request</string>
+    <string name="follow_instruction_to_allow_dnd_permission">Grant permission via ADB!</string>
 
 </resources>

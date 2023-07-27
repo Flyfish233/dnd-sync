@@ -1,15 +1,29 @@
 # 勿扰同步 DNDSync
 
-此应用程序的开发目的是实现我Pixel手机和Galaxy Watch 4之间的免打扰（DND）同步，因为只有与三星手机配对时才能使用此选项。
+此应用程序的开发目的是实现手机和 Galaxy Watch 之间的免打扰（DND）同步，因为只有与三星手机配对时才能使用此选项。
 
 如果在手机和手表上安装了该应用程序，它可以根据用户的偏好实现单向同步或双向同步。我还添加了自动切换就寝模式的功能。使用场景：晚上我将手机设置为免打扰，希望手表自动启用就寝模式。
 此功能通过辅助功能服务实现，因为我找不到如何以编程方式启用它（非常感谢任何提示）。
 
-注意：为了使就寝模式切换工作，重要的是在手表上将就寝模式按钮放在快速设置的第一页，并且在第一行的中间按钮上！
+注意：为了使就寝模式正常工作，重要的是在手表上将就寝模式按钮放在快速设置的第一页、第一行的中间按钮上！
+
+这个项目是 [https://github.com/DreadedLama/dnd-sync](https://github.com/DreadedLama/dnd-sync)
+的一个分支，支持 Google Wellbeing 的就寝模式同步。感谢原作者的开发。
+
+这个项目的主要存储库是 [https://github.com/rhaeus/dnd-sync/](https://github.com/rhaeus/dnd-sync/)
+，感谢原作者的开发。
 
 这个项目的一部分受到[blundens](https://github.com/blunden/DoNotDisturbSync)的启发，请查看他们的GitHub了解更多信息。
 
-_**在Pixel 3a XL上与Galaxy Watch 4（40mm）配对进行了测试**_
+## 更新日志
+
+- Material You 界面设计
+- 修复了一些错误
+- 使用 Kotlin 重写了代码
+- 更新最新的依赖和 SDK 版本
+- 简体中文翻译
+
+_**在 CrDroid 和 HONOR (MagicOS) 上与 Galaxy Watch 4 (40mm), Galaxy Watch 5 (44mm) 配对进行了测试**_
 
 <a href="https://youtu.be/rHy6kCBNOzA
 " target="_blank"><img src="http://img.youtube.com/vi/rHy6kCBNOzA/0.jpg"
@@ -17,7 +31,7 @@ alt="DNDSync演示" width="480" height="360" border="10" /></a>
 
 视频链接：https://youtu.be/rHy6kCBNOzA
 
-##           
+##                       
 
 ## 设置
 
@@ -55,7 +69,7 @@ _目前该应用程序尚未在Play商店中。需要手动安装。需要使用
     * 使用 `adb connect 192.168.0.100:5555` 连接到手表（_**插入您的IP！**_）
 * 安装应用程序：`adb install dndsync_wear.apk`
 * 授予DND访问权限  
-  `adb shell cmd notification allow_listener de.rhaeus.dndsync/de.rhaeus.dndsync.DNDNotificationService`  
+  `adb shell cmd notification allow_listener com.flyfish233.dndsync/com.flyfish233.dndsync.DNDNotificationService`  
   这允许应用程序监听DND更改并更改DND设置
 * 滚动到权限部分，检查DND权限是否显示为“已授权”（您可能需要点击菜单项以更新）
 * _**重要：完成后禁用ADB调试，因为它会消耗电池！**_
@@ -97,7 +111,7 @@ alt="DNDSync demo" width="480" height="360" border="10" /></a>
 
 Video link: https://youtu.be/rHy6kCBNOzA
 
-##           
+##                       
 
 ## Setup
 
@@ -141,7 +155,7 @@ Note: This is only tested on my Galaxy Watch 4 and it might not work on other de
     * connect to the watch with `adb connect 192.168.0.100:5555` (_**insert your value!**_)
 * install the app `adb install dndsync_wear.apk`
 * grant permission for DND access  
-  `adb shell cmd notification allow_listener de.rhaeus.dndsync/de.rhaeus.dndsync.DNDNotificationService`  
+  `adb shell cmd notification allow_listener com.flyfish233.dndsync/com.flyfish233.dndsync.DNDNotificationService`  
   This allows the app to listen to DND changes and changing the DND setting
 * scroll to the permission section and check if DND permission says _access granted_ (you might need
   to tap on the menu entry for it to update)

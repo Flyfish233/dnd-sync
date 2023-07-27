@@ -12,5 +12,11 @@
     <!-- Sync Preferences -->
     <string name="sync_title">Sync DND state to watch</string>
     <string name="sync_bedtime_title">Sync Bedtime mode to watch</string>
+    <string name="help_center_summary">Help (Chinese)</string>
+    <string name="sync_bedtime_summary">Make sure your watch has the Accessibility turned on and the Shortcut Panel set in the correct position. This feature requires Google Digital Wellbeing on your phone.</string>
+    <string name="github">View on GitHub</string>
+    <string name="github_summary">Star &amp; Contributing</string>
+    <string name="help_center">Tutorials</string>
+    <string name="help_header">Info</string>
 
 </resources>

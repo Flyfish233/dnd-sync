@@ -6,10 +6,6 @@
     android:paddingEnd="8dp"
     android:paddingBottom="8dp"
     android:scrollbars="vertical">
-    <!--    <androidx.wear.widget.SwipeDismissFrameLayout-->
-    <!--        android:id="@+id/settings"-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="match_parent" />-->
 
     <FrameLayout
         android:id="@+id/settings"

@@ -13,12 +13,12 @@
     <!-- Permission Preferences -->
     <string name="dnd_permission_title">DND Permission</string>
     <string name="dnd_permission_allowed">DND access granted</string>
-    <string name="dnd_permission_not_allowed">DND access denied</string>
+    <string name="dnd_permission_not_allowed">DND access denied,</string>
 
     <!-- Permission Preferences -->
     <string name="acc_permission_title">Accessibility Service</string>
-    <string name="acc_permission_allowed">connected</string>
-    <string name="acc_permission_not_allowed">not connected</string>
+    <string name="acc_permission_allowed">Granted</string>
+    <string name="acc_permission_not_allowed">Not granted</string>
 
     <!-- Sync Preferences -->
     <string name="sync_title">Sync DND</string>

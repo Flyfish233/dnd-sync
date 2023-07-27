@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">勿扰同步</string>
+    <string name="permission_header">权限</string>
+    <string name="sync_header">同步</string>
+    <string name="dnd_permission_title">免打扰权限</string>
+    <string name="dnd_permission_allowed">已授予免打扰权限</string>
+    <string name="dnd_permission_not_allowed">未激活免打扰权限</string>
+    <string name="sync_title">同步手机的勿扰模式到手表</string>
+    <string name="sync_bedtime_title">同步手机的就寝模式到手表</string>
+    <string name="help_header">链接</string>
+    <string name="help_center_summary">了解如何激活手表上的权限</string>
+    <string name="help_center">获取帮助教程</string>
+    <string name="github_summary">前往 GitHub 点个 Star 并帮助完善此项目</string>
+    <string name="github">GitHub 开源</string>
+    <string name="sync_bedtime_summary">确保您的手表打开了辅助功能并将快捷面板设置在正确位置。此功能需要安装手机端谷歌数字健康。</string>
+</resources>

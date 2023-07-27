@@ -12,8 +12,7 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/Theme.DNDSync"
-        >
+        android:theme="@style/Theme.DNDSync">
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -64,7 +63,7 @@
             </intent-filter>
         </service>
 
-        <!-- grant permission with: adb shell cmd notification allow_listener de.rhaeus.dndsync/de.rhaeus.dndsync.DNDNotificationService -->
+        <!-- grant permission with: adb shell cmd notification allow_listener com.flyfish233.dndsync/com.flyfish233.dndsync.DNDNotificationService -->
         <service
             android:name=".DNDNotificationService"
             android:enabled="true"
